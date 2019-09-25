@@ -59,7 +59,7 @@ const challenge = s => (s.map(v=>{for(j=++i;i%--j;);p+=!--j+(u=/(.)\1/i.test(v))
 
 La premiere particularité est l'utilisation de `()` pour remplacer les `{}` autours du corps de la fonction. En JS, si une fonction retourne une expression du type `(a, b, c, d)`, alors `a`, `b`, `c` et `d` seront executés, et la derniere valeur (`d`) sera retournée.
 
-Cela permet d'economiser les 6 lettres du mot clé `retour`.
+Cela permet d'economiser les 6 lettres du mot clé `return`.
 
 On commence par utiliser une `map` pour passer sur l'ensemble des elements de notre tableau en entrée. On n'utilise pas la valeur de retour de la `map`, mais c'est 4 lettres de moins que `forEach`.
 
