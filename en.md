@@ -85,7 +85,7 @@ We are only missing the duration `d` now. And because we already stored the cond
 
 The easiest method is to count all the vowels, and then compare that to the total length of the name. However it is really inefficient for us, as it would force us to use the `length` property a second time, which is... lengthy.
 
-Instead we are going to use a peculiarity of the `string` type. We can [access each char using `str[i]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#character_access). That means we can access the char at the `2*n+1` index, where `n` is the vowel count, and it comes back as `undefined`, then we have more vowels than consonants.
+Instead we are going to use a peculiarity of the `string` type. We can [access each char using `str[i]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#character_access). That means we can access the char at the `2*n-1` index, where `n` is the vowel count, and it comes back as `undefined`, then we have more vowels than consonants.
 
 All that is left for us to do is figure out the number of vowels. We can do that using the `/[aeiouy]/gi` regex, capturing all occurences in an Array and then get it's length.
 
